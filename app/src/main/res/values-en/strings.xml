@@ -4,5 +4,6 @@
     <string name="app_name">Bonjour!</string>
     <string name="hello_message">hello_message</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="test">test</string>
 
 </resources>
