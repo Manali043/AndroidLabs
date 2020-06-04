@@ -1,0 +1,12 @@
+<resources>
+    <string name="ButtonText">Main button hu</string>
+    <drawable name="ImageButton">@drawable/flag</drawable>
+    <string name="Switch">chalu/band</string>
+    <string name="EditText">Likho</string>
+    <string name="toast_message">Jankari</string>
+    <string name="snack_message1">box</string>
+    <string name="snack_message2">Switch is </string>
+    <string name="Lab2">Dusri Lab</string>
+    <string name="Hello_message">Mera GUI dekho</string>
+    <string name="CheckBoxText">Dekho mujhe!</string>
+</resources>

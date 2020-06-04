@@ -1,36 +1,61 @@
 package com.example.androidlabs;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
+import com.google.android.material.snackbar.Snackbar;
 
-import java.util.Locale;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_linear);
+        //setContentView(R.layout.activity_main_grid);
+        //  setContentView(R.layout.activity_main_relative);
 
-        setAppLocale("fr");
+        Button button = (Button) findViewById(R.id.button);
 
-        setContentView(R.layout.activity_main);
-    }
+        button.setOnClickListener( new View.OnClickListener(){
+            public void onClick(View v){
+                Toast.makeText(MainActivity.this, getResources().getString(R.string.toast_message), Toast.LENGTH_SHORT).show();
 
-    private void setAppLocale(String localeC){
-        Resources r = getResources();
-        DisplayMetrics d = r.getDisplayMetrics();
-        Configuration c = r.getConfiguration();
+            } });
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1 ){
-            c.setLocale(new Locale(localeC.toLowerCase()));
-        }else{
-           c.locale = new Locale(localeC.toLowerCase());
-        }
-        r.updateConfiguration(c,d);
+
+        CheckBox cb = (CheckBox)findViewById(R.id.checkBox);
+        cb.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            public void onCheckedChanged( CompoundButton buttonView, boolean b) {
+                // update your model (or other business logic) based on isChecked
+
+                Snackbar.make(cb, getResources().getString(R.string.snack_message1) + b, Snackbar.LENGTH_LONG)
+                        .setAction("Undo", clickView -> buttonView.setChecked( !b ))
+                        .show();
+
+            }
+        });
+        Switch box = (Switch)findViewById(R.id.switch1);
+        box.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean a) {
+                // update your model (or other business logic) based on isChecked
+
+                Snackbar.make(box, getResources().getString(R.string.snack_message2) + a, Snackbar.LENGTH_LONG)
+                        .setAction("Undo", clickView -> buttonView.setChecked( !a ))
+                        .show();
+
+            }
+        });
+
+
+
     }
 }
