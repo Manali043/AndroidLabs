@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/Lab3TextView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Hello_message"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/Lab3TextView1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"/>
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="62dp"
-        android:text="@string/ButtonText" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:text="@string/CheckBoxText" />
-
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ImageButton" />
-
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/Switch" />
 
     <EditText
-        android:id="@+id/plain_text_input"
-        android:layout_height="wrap_content"
+        android:id="@+id/Lab3editText2"
         android:layout_width="match_parent"
-        android:hint="@string/EditText"
-        android:inputType="text"/>
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/Lab3EmailHint"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Lab3TextView1"
+        />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/Lab3textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Lab3TextView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Lab3editText2"/>
+
+    <EditText
+        android:id="@+id/Lab3editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Lab3textView2"
+        />
+    <Button
+        android:id="@+id/Lab3LoginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/Lab3editText3"
+        android:text="@string/Lab3LoginBtnText"
+        />
+
+</RelativeLayout>

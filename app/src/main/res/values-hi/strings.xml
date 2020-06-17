@@ -1,12 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ButtonText">Main button hu</string>
-    <drawable name="ImageButton">@drawable/flag</drawable>
-    <string name="Switch">chalu/band</string>
-    <string name="EditText">Likho</string>
-    <string name="toast_message">Jankari</string>
-    <string name="snack_message1">box</string>
-    <string name="snack_message2">Switch is </string>
-    <string name="Lab2">Dusri Lab</string>
-    <string name="Hello_message">Mera GUI dekho</string>
-    <string name="CheckBoxText">Dekho mujhe!</string>
+    <string name="Lab3">लैब ३</string>
+    <string name="Lab3TextView1">अपना ईमेल पता दर्ज करें:</string>
+    <string name="Lab3TextView2">अपना पासवर्ड डालें:</string>
+    <string name="Lab3EmailHint">यहां ईमेल लिखें:</string>
+    <string name="Lab3LoginBtnText">लॉगिन</string>
+    <string name="ProfileText">आपकी रूपरेखा</string>
+    <string name="NameText">आपका नाम:</string>
+    <string name="NameHintText">अपना नाम दर्ज करें</string>
+    <string name="EmailTextViewText">तुम्हारा ईमेल:</string>
+    <string name="EmailHintText">अपना ईमेल दर्ज करें</string>
+    <string name="PictureTextView">आपकी तस्वीर:</string>
+    <string name="ImagePictureTextView">तस्वीर लेने के लिए ऊपर दिए गए बटन पर क्लिक करें</string>
+
 </resources>
