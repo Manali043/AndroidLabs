@@ -65,7 +65,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        tools:srcCompat="@android:drawable/picture_frame"
+        android:src="@android:drawable/picture_frame"
         android:layout_below="@id/PictureTextView"/>
     <TextView
         android:id="@+id/ImagePictureTextView"
@@ -75,6 +75,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_below="@id/ImageButton"/>
+
+    <Button
+        android:id="@+id/GoToChatBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/GoToChatText"
+        android:layout_below="@id/ImagePictureTextView"/>
 
 
 

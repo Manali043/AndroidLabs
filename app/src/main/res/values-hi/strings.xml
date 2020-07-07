@@ -1,16 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="Lab3">लैब ३</string>
-    <string name="Lab3TextView1">अपना ईमेल पता दर्ज करें:</string>
-    <string name="Lab3TextView2">अपना पासवर्ड डालें:</string>
-    <string name="Lab3EmailHint">यहां ईमेल लिखें:</string>
-    <string name="Lab3LoginBtnText">लॉगिन</string>
-    <string name="ProfileText">आपकी रूपरेखा</string>
-    <string name="NameText">आपका नाम:</string>
-    <string name="NameHintText">अपना नाम दर्ज करें</string>
-    <string name="EmailTextViewText">तुम्हारा ईमेल:</string>
-    <string name="EmailHintText">अपना ईमेल दर्ज करें</string>
-    <string name="PictureTextView">आपकी तस्वीर:</string>
-    <string name="ImagePictureTextView">तस्वीर लेने के लिए ऊपर दिए गए बटन पर क्लिक करें</string>
+    <string name="app_name">Android Ki Labs</string>
+    <string name="hello_message">Namaste!</string>
+    <string name="ButtonText">Main Button Hu</string>
+    <string name="ButtonText2">Btn</string>
+    <string name="CheckBoxText">Dekho!</string>
+    <string name="SwitchText">on / off</string>
+    <string name="EditText">Apna Jwaab Likho</string>
+    <string name="TextViewText">Mere widgets:</string>
+    <string name="Lab3TextView1">Apni email address Likho:</string>
+    <string name="Lab3TextView2">Apna password Likho:</string>
+    <string name="Lab3EmailHint">"email Likho "</string>
+    <string name="Lab3LoginBtnText">Log in</string>
+    <string name="ProfileText">Apki profile</string>
+    <string name="NameText">Apki name:</string>
+    <string name="NameHintText">" Apna Naam Likho"</string>
+    <string name="EmailTextViewText">Apki email:</string>
+    <string name="EmailHintText">email Likho</string>
+    <string name="PictureTextView">Apki picture:</string>
+    <string name="ImagePictureTextView">Picture</string>
+    <string name="GoToChatText">Chat</string>
+    <string name="SendText">Bhejo</string>
+    <string name="ReceiveText">Milna</string>
+    <string name="ChatHint">Likho</string>
+    <string name="yes">haan</string>
+    <string name="delete_confirm_msg">delete krna chahte ho?</string>
+    <string name="no">Nahi</string>
 
 </resources>
