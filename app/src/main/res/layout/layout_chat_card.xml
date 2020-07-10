@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/main"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clipToPadding="false">
+
+
+    <View
+        android:layout_marginLeft="15dp"
+        android:id="@+id/senderAvatar"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerInside"
+        android:background="@drawable/row_send"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"/>
+
+    <TextView
+        android:id="@+id/senderName"
+        android:layout_marginLeft="15dp"
+        android:layout_toRightOf="@+id/senderAvatar"
+        android:layout_alignTop="@+id/senderAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/receive_message"
+        android:elevation="2dp"
+        android:text="abc"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/receiverAvatar"
+        android:layout_alignParentRight="true"
+        android:scaleType="centerInside"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/row_recieve"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:divider="#CCCCCC"/>
+
+    <TextView
+        android:id="@+id/receiverName"
+        android:layout_marginLeft="15dp"
+        android:layout_toLeftOf="@+id/receiverAvatar"
+        android:layout_alignTop="@+id/receiverAvatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="4dp" />
+
+</LinearLayout>

@@ -34,13 +34,9 @@ public class ChatRoomActivity extends AppCompatActivity {
         sendBtn = (Button)findViewById(R.id.SendBtn);
         receiveBtn = (Button)findViewById(R.id.ReceiveBtn);
 
-
-
-
-
         sendBtn.setOnClickListener(c -> {
             String message = editText.getText().toString();
-            MessageModel model = new MessageModel(message, true);
+            MessageModel model = new MessageModel(message,true);
             listMessage.add(model);
             editText.setText("");
             ChatAdapter adt = new ChatAdapter(listMessage, getApplicationContext());

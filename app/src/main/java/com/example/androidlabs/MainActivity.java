@@ -4,17 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.Switch;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.snackbar.Snackbar;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
             Intent profilePage = new Intent(MainActivity.this, ProfileActivity.class);
             //Give directions to go from this page, to SecondActivity
-            EditText et = (EditText)findViewById(R.id.Lab3editText2);
+            //EditText et = (EditText)findViewById(R.id.Lab3editText2);
 
-            profilePage.putExtra("emailTyped", et.getText().toString());
+            profilePage.putExtra("emailTyped", emailField.getText().toString());
 
             //Now make the transition:
             startActivityForResult( profilePage, 345);

@@ -1,6 +1,7 @@
 package com.example.androidlabs;
 
 import android.content.Context;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,14 +45,27 @@ public class ChatAdapter extends BaseAdapter {
         View view = convertView;
 
         if (view == null){
+            view = inflater.inflate(layout.layout_chat_card, null);
             if (messageModels.get(position).isSend()){
-                view = inflater.inflate(layout.activity_main_send, null);
 
+                View imgView = view.findViewById(R.id.senderAvatar);
+                imgView.setVisibility(View.INVISIBLE);
+                TextView tvsend = view.findViewById(R.id.senderName);
+                tvsend.setVisibility(View.INVISIBLE);
+                TextView  messageText = (TextView)view.findViewById(id.textViewMessage);
+                messageText.setText(messageModels.get(position).message);
+                messageText.setGravity(Gravity.END);
             }else {
-                view = inflater.inflate(layout.activity_main_receive, null);
+                View imgView = view.findViewById(id.receiverAvatar);
+                imgView.setVisibility(View.INVISIBLE);
+                TextView tvrec = view.findViewById(R.id.receiverName);
+                tvrec.setGravity(Gravity.START);
+                tvrec.setVisibility(View.INVISIBLE);
+                TextView  messageText = (TextView)view.findViewById(id.textViewMessage);
+                messageText.setText(messageModels.get(position).message);
+                messageText.setGravity(Gravity.START);
             }
-            TextView  messageText = (TextView)view.findViewById(id.textViewMessage);
-            messageText.setText(messageModels.get(position).message);
+
         }
         return view;
     }
