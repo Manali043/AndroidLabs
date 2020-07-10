@@ -4,12 +4,28 @@ public class MessageModel {
     public String message;
     public boolean isSend;
 
+    private   long id;
+
+    public MessageModel(Long id , String message,  boolean isSend) {
+        this.id = id;
+        this.message = message;
+        this.isSend = isSend;
+    }
+
     public MessageModel(String message, boolean isSend) {
         this.message = message;
         this.isSend = isSend;
     }
 
     public MessageModel() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getMessage() {

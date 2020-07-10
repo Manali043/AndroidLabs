@@ -24,6 +24,8 @@ public class ChatRoomActivity extends AppCompatActivity {
     List<MessageModel> listMessage = new ArrayList<>();
     Button sendBtn;
     Button receiveBtn;
+    DbHelper dbHelper;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,14 +35,18 @@ public class ChatRoomActivity extends AppCompatActivity {
         editText = (EditText)findViewById(R.id.ChatEditText);
         sendBtn = (Button)findViewById(R.id.SendBtn);
         receiveBtn = (Button)findViewById(R.id.ReceiveBtn);
-
+        dbHelper = new DbHelper(this);
+        ChatAdapter adapter = new ChatAdapter(listMessage, getApplicationContext());
+        listMessage.addAll(dbHelper.read());
+        listView.setAdapter(adapter);
         sendBtn.setOnClickListener(c -> {
             String message = editText.getText().toString();
             MessageModel model = new MessageModel(message,true);
             listMessage.add(model);
             editText.setText("");
-            ChatAdapter adt = new ChatAdapter(listMessage, getApplicationContext());
-            listView.setAdapter(adt);
+
+            dbHelper.create(model);
+            listView.setAdapter(adapter);
         });
 
         receiveBtn.setOnClickListener(c -> {
@@ -48,8 +54,8 @@ public class ChatRoomActivity extends AppCompatActivity {
             MessageModel model = new MessageModel(message, false);
             listMessage.add(model);
             editText.setText("");
-            ChatAdapter adt = new ChatAdapter(listMessage, getApplicationContext());
-            listView.setAdapter(adt);
+            dbHelper.create(model);
+            listView.setAdapter(adapter);
         });
 
         listView.setOnItemClickListener((AdapterView<?> parent, View view, int position, long id) -> {
@@ -57,16 +63,19 @@ public class ChatRoomActivity extends AppCompatActivity {
             alertDialogBuilder
                     .setTitle(getString(R.string.delete_confirm_msg))
                     .setPositiveButton(R.string.yes, (DialogInterface dialog, int which) -> {
+
+                        MessageModel message = listMessage.get(position);
+                        dbHelper.drop(message);
+
                         listMessage.remove(position);
-                        ChatAdapter myAdapter = new ChatAdapter(listMessage, getApplicationContext());
-                        listView.setAdapter(myAdapter);
-                        //   ChatAdapter.notifyDataSetChanged();
+
+                        listView.setAdapter(adapter);
+
                     })
                     .setNegativeButton(R.string.no, null)
                     .show();
         });
 
-        Log.d("ChatRoomActivity","onCreate");
 
     }
 
